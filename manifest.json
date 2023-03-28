@@ -1,0 +1,28 @@
+{
+  "name": "Random night wallpapers",
+  "version": "1.0",
+  "description": "Random night/dark wallpapers.",
+  "manifest_version": 2,
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "file:///*/*"
+  ],
+  "browser_action": {
+    "default_popup": "www/index.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "www/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "www/index.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": ["www/images/*"]
+}
